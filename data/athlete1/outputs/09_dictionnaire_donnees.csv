@@ -1,0 +1,47 @@
+variable,categorie,statut_whoop,definition,pct_manquant,n_valeurs_distinctes,exploitable
+recup,physio,indice approché,récupération 0-100 ; R2=0.78 ~ HRV + perf. sommeil,0.0,89.0,oui
+hrv,physio,mesure,rMSSD pendant le sommeil profond (ms),0.0,65.0,oui
+fc_repos,physio,mesure,FC minimale soutenue du sommeil (bpm),0.0,21.0,oui
+temp_peau,physio,mesure,température cutanée nocturne (°C),1.1,153.0,oui
+spo2,physio,mesure,"oxymétrie optique, estimation ±2-3 %",0.6,193.0,oui
+freq_resp,physio,mesure,fréquence respiratoire nocturne (/min),0.0,36.0,oui
+strain_jour,charge,indice approché,effort cardio du jour 0-21 ; R2=0.92 formule cardio,0.0,135.0,oui
+cal_jour,charge,mesure dérivée,dépense énergétique (kcal),0.0,311.0,oui
+fc_moy_jour,charge,mesure,FC moyenne sur 24 h (bpm),0.0,30.0,oui
+fc_max_jour,charge,mesure,FC max sur 24 h (bpm),0.0,87.0,oui
+sommeil_min,sommeil,mesure,temps endormi (min) = leger+profond+rem,0.0,236.0,oui
+au_lit_min,sommeil,calcul transparent,= sommeil + eveille,0.0,253.0,oui
+leger_min,sommeil,mesure,sommeil léger (min),0.0,198.0,oui
+profond_min,sommeil,mesure,sommeil profond / SWS (min),0.0,100.0,oui
+rem_min,sommeil,mesure,sommeil paradoxal (min),0.0,153.0,oui
+eveille_min,sommeil,mesure,temps éveillé pendant la nuit (min),0.0,93.0,oui
+besoin_min,sommeil,indice approché,besoin de sommeil estimé (min),0.0,158.0,oui
+dette_min,sommeil,indice opaque,dette de sommeil : déficit récent plafonné/amorti,0.0,102.0,oui
+efficacite,sommeil,calcul transparent,= sommeil / au lit (%),0.0,23.0,oui
+regularite,sommeil,indice approché,"régularité des horaires (%), ~10 % non calculée",10.1,74.0,oui
+sommeil_perf,sommeil,indice approché,~ sommeil / besoin (%),0.0,57.0,oui
+ratio_rem_profond,sommeil,dérivée,REM / profond,0.0,145.0,oui
+ecart_besoin_sommeil,sommeil,dérivée,sommeil - besoin (min),0.0,239.0,oui
+n_seances,charge,dérivée,nombre de séances du jour,0.0,8.0,oui
+duree_seances_min,charge,mesure dérivée,durée totale des séances (min),0.0,109.0,oui
+strain_seances,charge,indice approché,somme des strains de séance (proxy TRIMP),0.0,145.0,oui
+strain_seance_max,charge,indice approché,strain de la séance la plus dure,35.3,109.0,oui
+fc_moy_seances,charge,mesure,"FC moyenne des séances, pondérée durée",35.3,115.0,oui
+pct_zone45_seances,charge,mesure,% du temps de séance en zones FC 4-5,35.3,80.0,oui
+strain_j_1,dérivée,décalage,strain de la veille,5.7,133.0,oui
+hrv_j_1,dérivée,décalage,HRV de la veille,5.7,65.0,oui
+recup_j1,dérivée,décalage,récup du lendemain (cible potentielle),5.7,87.0,oui
+tz_offset,contexte,construite,décalage horaire du jour,0.0,4.0,oui
+tz_change,contexte,construite,changement de fuseau ce jour,0.0,2.0,oui
+jours_depuis_changement_tz,contexte,construite,jours depuis le dernier changement,0.0,57.0,oui
+seance_foot,contexte,drapeau,activité Soccer ce jour (entraînement inclus),0.0,2.0,oui
+jour_off,contexte,drapeau,aucune séance,0.0,2.0,oui
+sommeil_perturbe,contexte,drapeau,jour à sommeil éclaté (2 seulement),0.0,2.0,oui
+weekend,contexte,drapeau,samedi ou dimanche,0.0,2.0,oui
+jour_semaine,contexte,construite,0=lundi .. 6=dimanche,0.0,7.0,oui
+bracelet_porte,contexte,drapeau,jour avec cycle valide,0.0,1.0,oui
+jrn_alcool,journal,déclaratif,alcool (quasi toujours faux),45.7,1.0,non — variance quasi nulle
+jrn_cafeine,journal,déclaratif,caféine (quasi toujours faux),45.7,1.0,non — variance quasi nulle
+jrn_hydrate,journal,déclaratif,hydratation (quasi toujours faux),59.5,2.0,non — variance quasi nulle
+jrn_repas_tardif,journal,déclaratif,repas tardif (quasi toujours faux),45.7,1.0,non — variance quasi nulle
+jrn_ecran_lit,journal,déclaratif,écran au lit (quasi toujours faux),45.7,1.0,non — variance quasi nulle

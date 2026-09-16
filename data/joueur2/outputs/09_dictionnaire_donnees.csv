@@ -1,0 +1,62 @@
+variable,categorie,statut_whoop,definition,pct_manquant,n_valeurs_distinctes,exploitable
+recup,physio,indice approché,récupération 0-100 ; R2=0.74 ~ perf. sommeil + HRV,0.0,93.0,oui
+hrv,physio,mesure,rMSSD pendant le sommeil profond (ms),0.0,38.0,oui
+fc_repos,physio,mesure,FC minimale soutenue du sommeil (bpm),0.0,18.0,oui
+temp_peau,physio,mesure,température cutanée nocturne (°C),2.1,127.0,oui
+spo2,physio,mesure,"oxymétrie optique, estimation ±2-3 %",0.9,256.0,oui
+freq_resp,physio,mesure,fréquence respiratoire nocturne (/min),0.0,28.0,oui
+strain_jour,charge,indice approché,effort cardio du jour 0-21 ; R2=0.92 formule cardio,0.0,131.0,oui
+cal_jour,charge,mesure dérivée,dépense énergétique (kcal),0.0,489.0,oui
+fc_moy_jour,charge,mesure,FC moyenne sur 24 h (bpm),0.0,27.0,oui
+fc_max_jour,charge,mesure,FC max sur 24 h (bpm),0.0,73.0,oui
+sommeil_min,sommeil,mesure,temps endormi (min) = leger+profond+rem,0.0,290.0,oui
+au_lit_min,sommeil,calcul transparent,"= sommeil + eveille (67 % exact seulement, cf. étape 5)",0.0,307.0,oui
+leger_min,sommeil,mesure,sommeil léger (min),0.0,242.0,oui
+profond_min,sommeil,mesure,sommeil profond / SWS (min),0.0,127.0,oui
+rem_min,sommeil,mesure,sommeil paradoxal (min),0.0,153.0,oui
+eveille_min,sommeil,mesure,temps éveillé pendant la nuit (min),0.0,164.0,oui
+besoin_min,sommeil,indice approché,besoin de sommeil estimé (min),0.0,190.0,oui
+dette_min,sommeil,indice opaque,dette de sommeil : déficit récent plafonné/amorti,0.0,117.0,oui
+efficacite,sommeil,calcul transparent,= sommeil / au lit (%),0.0,41.0,oui
+regularite,sommeil,indice approché,"régularité des horaires (%), ~8 % non calculée",8.2,63.0,oui
+sommeil_perf,sommeil,indice approché,~ sommeil / besoin (%),0.0,83.0,oui
+ratio_rem_profond,sommeil,dérivée,REM / profond,0.4,145.0,oui
+ecart_besoin_sommeil,sommeil,dérivée,sommeil - besoin (min),0.0,321.0,oui
+n_seances,charge,dérivée,nombre de séances du jour,0.0,5.0,oui
+duree_seances_min,charge,mesure dérivée,durée totale des séances (min),0.0,135.0,oui
+strain_seances,charge,indice approché,somme des strains de séance (proxy TRIMP),0.0,169.0,oui
+strain_seance_max,charge,indice approché,strain de la séance la plus dure,20.8,120.0,oui
+fc_moy_seances,charge,mesure,"FC moyenne des séances, pondérée durée",20.8,119.0,oui
+pct_zone45_seances,charge,mesure,% du temps de séance en zones FC 4-5,20.8,122.0,oui
+strain_j_1,dérivée,décalage,strain de la veille,0.9,131.0,oui
+hrv_j_1,dérivée,décalage,HRV de la veille,0.9,38.0,oui
+recup_j1,dérivée,décalage,récup du lendemain (cible potentielle),0.9,93.0,oui
+tz_offset,contexte,construite,décalage horaire du jour,0.0,3.0,oui
+tz_change,contexte,construite,changement de fuseau ce jour,0.0,2.0,oui
+jours_depuis_changement_tz,contexte,construite,jours depuis le dernier changement,0.0,290.0,oui
+seance_foot,contexte,drapeau,activité Football ce jour (entraînement inclus),0.0,2.0,oui
+jour_off,contexte,drapeau,aucune séance,0.0,2.0,oui
+sommeil_perturbe,contexte,drapeau,jour à sommeil éclaté (3 seulement),0.0,2.0,oui
+weekend,contexte,drapeau,samedi ou dimanche,0.0,2.0,oui
+jour_semaine,contexte,construite,0=lundi .. 6=dimanche,0.0,7.0,oui
+bracelet_porte,contexte,drapeau,jour avec cycle valide,0.0,1.0,oui
+jrn_recup_ressentie,journal,déclaratif,"sensation d'avoir récupéré — comparable à `recup` Whoop, ~30 % de oui",25.9,2.0,oui
+jrn_stabilite_emotionnelle,journal,déclaratif,"stabilité émotionnelle/mentale ressentie, ~25 % de oui",37.7,2.0,oui
+jrn_ecran_lit,journal,déclaratif,"écran au lit, ~24 % de oui",37.7,2.0,oui
+jrn_piece_sombre,journal,déclaratif,"pièce sombre pour dormir, ~30 % de oui",37.7,2.0,oui
+jrn_lit_partage,journal,déclaratif,"lit partagé, ~18 % de oui",37.7,2.0,oui
+jrn_lit_habituel,journal,déclaratif,"même lit que d’habitude, ~15 % de oui",37.8,2.0,oui
+jrn_partage_enfant,journal,déclaratif,"espace de couchage partagé avec un enfant, ~14 % de oui",37.7,2.0,oui
+jrn_enfant_bas_age,journal,déclaratif,"élève un enfant en bas âge, ~30 % de oui",25.9,2.0,oui
+jrn_vitamine_c,journal,déclaratif,"vitamine C, ~13 % de oui",37.7,2.0,oui
+jrn_proteines,journal,déclaratif,"protéines consommées, ~13 % de oui, mais 70 % manquant (question ajoutée tard)",69.6,2.0,partiel — beaucoup de manquants
+jrn_vitamine_b12,journal,déclaratif,"vitamine B12, ~3 % de oui",37.7,2.0,oui
+jrn_repas_tardif,journal,déclaratif,"repas tardif, ~3 % de oui",24.5,2.0,oui
+jrn_rapports_sexuels,journal,déclaratif,"rapports sexuels, ~3 % de oui",37.7,2.0,oui
+jrn_ballonnements,journal,déclaratif,"ballonnements, ~5 % de oui",37.8,2.0,oui
+jrn_hydrate,journal,déclaratif,"hydratation suffisante, quasi jamais renseigné (90 % manquant)",89.7,2.0,partiel — beaucoup de manquants
+jrn_avion,journal,déclaratif,"voyage en avion — 0 % de oui sur toute la période, y compris le séjour de juillet 2025 (question ajoutée après, ou trajet non aérien)",37.8,1.0,non — variance quasi nulle
+jrn_celibataire,journal,déclaratif,variance nulle (toujours non) — non exploitable,37.7,1.0,non — variance quasi nulle
+jrn_ains,journal,déclaratif,"anti-inflammatoire non stéroïdien, variance nulle — non exploitable",37.7,1.0,non — variance quasi nulle
+jrn_sauna,journal,déclaratif,variance nulle (jamais) — non exploitable,37.7,1.0,non — variance quasi nulle
+jrn_hammam,journal,déclaratif,variance nulle (jamais) — non exploitable,37.7,1.0,non — variance quasi nulle

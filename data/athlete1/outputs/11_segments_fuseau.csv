@@ -1,0 +1,16 @@
+offset,debut,fin,n_jours,categorie
+2.0,2025-05-22,2025-06-03,13,"France (hiver +1 / été +2, normal)"
+1.0,2025-06-04,2025-06-09,6,"France (hiver +1 / été +2, normal)"
+2.0,2025-06-10,2025-07-12,33,"France (hiver +1 / été +2, normal)"
+1.0,2025-07-13,2025-09-03,51,long séjour à décalage constant (~7-8 semaines)
+2.0,2025-09-04,2025-10-25,49,long séjour à décalage constant (~7-8 semaines)
+1.0,2025-10-26,2026-02-08,57,long séjour à décalage constant (~7-8 semaines)
+-5.0,2026-02-09,2026-02-15,7,"grand voyage (USA, aller)"
+0.0,2026-02-16,2026-02-22,7,"grand voyage (retour, transit)"
+1.0,2026-02-23,2026-03-19,24,"France (hiver +1 / été +2, normal)"
+0.0,2026-03-20,2026-03-20,1,blip 1 jour (probable artefact)
+1.0,2026-03-21,2026-03-28,7,"France (hiver +1 / été +2, normal)"
+2.0,2026-03-29,2026-04-12,11,"France (hiver +1 / été +2, normal)"
+1.0,2026-04-13,2026-04-27,7,"France (hiver +1 / été +2, normal)"
+2.0,2026-04-28,2026-05-23,23,"France (hiver +1 / été +2, normal)"
+1.0,2026-05-24,2026-07-16,52,long séjour à décalage constant (~7-8 semaines)
